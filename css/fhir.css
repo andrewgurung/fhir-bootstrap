@@ -1,0 +1,27 @@
+/* Move down content because we have a fixed navbar that is 50px tall */
+body {
+  font-family: 'Roboto Slab', serif;
+  padding-top: 50px;
+  padding-bottom: 20px;
+}
+
+.jumbotron {
+    background-color:#faa937 !important;
+    /* border-color: #eea236 !important; */
+}
+
+.text-white {
+  color: #f2f2f2;
+}
+
+.text-black {
+  color: #333;
+}
+
+.text-bright-red {
+  color: #d43f3a;
+}
+
+.apiSection .btn {
+  min-width: 80px;
+}

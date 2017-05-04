@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="favicon.ico">
+
+    <title>FHIR Terminology Server</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="./css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="./css/fhir.css" rel="stylesheet">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#"><span class="glyphicon glyphicon-fire" aria-hidden="true"></span> FHIR Terminology Server</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <form class="navbar-form navbar-right">
+            <div class="form-group">
+              <input type="text" placeholder="Email" class="form-control">
+            </div>
+            <div class="form-group">
+              <input type="password" placeholder="Password" class="form-control">
+            </div>
+            <button type="submit" class="btn btn-success">Sign in</button>
+          </form>
+        </div><!--/.navbar-collapse -->
+      </div>
+    </nav>
+
+    <!-- Main jumbotron for a primary marketing message or call to action -->
+    <div class="jumbotron">
+      <div class="container">
+        <h1><span class="glyphicon glyphicon-fire text-bright-red" aria-hidden="true"></span> <span class="text-white">FHIR Terminology Server</span></h1>
+        <p>This specification includes support for the provision of a terminology service - that is, a service that lets healthcare applications make use of codes and value sets without having to become experts in the fine details of code system, value set and concept map resources, and the underlying code systems and terminological principles.</p>
+        <p><a class="btn btn-danger btn-lg" href="#" role="button">Learn more &raquo;</a></p>
+      </div>
+    </div>
+
+    <div class="container">
+      <!-- Code System Operation -->
+      <div class="row">
+        <nav class="navbar navbar-default">
+          <div class="container-fluid">
+            <div class="navbar-header">
+              <a class="navbar-brand" href="#"><strong class="text-danger">Code System Rest API</strong></a>
+            </div>
+            <button class="btn btn-warning navbar-btn pull-right" data-toggle="collapse" data-target="#codesystem">Toggle</button>
+          </div>
+        </nav>
+        <!-- Code System Api Section -->
+        <div class="row apiSection col-md-12" id="codesystem">
+
+          <div class="col-md-12">
+            <div class="panel panel-success">
+              <div class="panel-heading">
+                <a class="btn btn-success btn-md" href="#" data-toggle="collapse" data-target="#1">GET</a>
+                <span class="text-black"> <strong>/CodeSystem/$lookup</strong>?system={CS}&code={Code}</span>
+              </div>
+              <div class="panel-body collapse" id="1" >
+                Panel content
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-12">
+            <div class="panel panel-info">
+              <div class="panel-heading">
+                <a class="btn btn-primary btn-md" href="#" data-toggle="collapse" data-target="#2">POST</a>
+                <span class="text-black"> <strong>/CodeSystem/$lookup</strong>?system={CS}&code={Code}</span>
+              </div>
+              <div class="panel-body collapse" id="2" >
+                Panel content
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-12">
+            <div class="panel panel-danger">
+              <div class="panel-heading">
+                <a class="btn btn-danger btn-md" href="#" data-toggle="collapse" data-target="#4">DELETE</a>
+                <span class="text-black"> <strong>/CodeSystem/</strong>{CODE}</span>
+              </div>
+              <div class="panel-body collapse" id="4" >
+                Panel content
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Code System Api Section Ends -->
+      </div>
+      <!-- Code System Operation -->
+
+      <!-- Value Set Operation -->
+      <div class="row">
+        <nav class="navbar navbar-default">
+          <div class="container-fluid">
+            <div class="navbar-header">
+              <a class="navbar-brand" href="#"><strong class="text-danger">Value Set Rest API</strong></a>
+            </div>
+            <button class="btn btn-warning navbar-btn pull-right" data-toggle="collapse" data-target="#valueset">Toggle</button>
+          </div>
+        </nav>
+        <!-- Value Set Api Section -->
+        <div class="row apiSection collapse col-md-12" id="valueset">
+
+          <div class="col-md-12">
+            <div class="panel panel-success">
+              <div class="panel-heading">
+                <a class="btn btn-success btn-md" href="#" data-toggle="collapse" data-target="#v1">GET</a>
+                <span class="text-black"> <strong>/ValueSet/$lookup</strong>{OID}/$expand</span>
+              </div>
+              <div class="panel-body collapse" id="v1" >
+                Panel content
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-12">
+            <div class="panel panel-info">
+              <div class="panel-heading">
+                <a class="btn btn-primary btn-md" href="#" data-toggle="collapse" data-target="#v2">POST</a>
+                <span class="text-black"> <strong>/ValueSet/</strong>{OID}/$expand?filter=fail</span>
+              </div>
+              <div class="panel-body collapse" id="v2" >
+                Panel content
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-12">
+            <div class="panel panel-success">
+              <div class="panel-heading">
+                <a class="btn btn-success btn-md" href="#" data-toggle="collapse" data-target="#v3">GET</a>
+                <span class="text-black"> <strong>/ValueSet/</strong>{OID}</span>
+              </div>
+              <div class="panel-body collapse" id="v3" >
+                Panel content
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-12">
+            <div class="panel panel-danger">
+              <div class="panel-heading">
+                <a class="btn btn-danger btn-md" href="#" data-toggle="collapse" data-target="#v4">DELETE</a>
+                <span class="text-black"> <strong>/ValueSet/</strong>{OID}</span>
+              </div>
+              <div class="panel-body collapse" id="v4" >
+                Panel content
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Code System Api Section Ends -->
+      </div>
+      <!-- Code System Operation -->
+
+      <hr>
+      <footer>
+        <div class="container">
+          <div class="col-md-4">
+            <span>
+      				<a href="https://www.nlm.nih.gov/copyright.html" title="Copy right">Copyright</a>,
+      				<a href="https://www.nlm.nih.gov/privacy.html" title="Privacy">Privacy</a>,
+      				<a href="https://www.nlm.nih.gov/accessibility.html"
+      					title="Accessibility">Accessibility</a> <br /> U.S. National
+      				Library of Medicine, 8600 Rockville Pike, Bethesda, MD 20894 <br />
+      				<a href="http://www.nih.gov/" title="National Institutes of Health">National
+      					Institutes of Health</a>, <a href="https://www.hhs.gov/"
+      					title="Health Human Services">Health &amp; Human Services</a> <br />
+      				<a href="http://www.nih.gov/icd/od/foia/index.htm"
+      					title="Freedom of Information Act">Freedom of Information Act</a>,
+      				<a href="https://apps.nlm.nih.gov/mainweb/siebel/nlm/index.cfm"
+      					title="contact Us">Contact Us</a>
+      			</span>
+          </div>
+          <div class="col-md-4">
+            <a href="https://www.usa.gov/" title="USA GOV">
+              <img height="30" width="109" alt="USA.gov logo"	src="https://www.nlm.nih.gov/images/usagov_logo.gif" class="center"	border="0" />
+				    </a>
+          </div>
+          <div class="col-md-4">
+            <strong>Last updated:</strong> January 20, 2017 <br /> <strong>First published:</strong> May 10, 2016
+            <br />
+            <strong>Version:</strong> 0.8.3
+          </div>
+
+        </div>
+      </footer>
+    </div> <!-- /container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="./js/bootstrap.min.js"></script>
+  </body>
+</html>
