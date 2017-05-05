@@ -79,20 +79,77 @@
 
           <div class="col-md-12">
             <div class="panel panel-success">
-              <div class="panel-heading">
-                <a class="btn btn-success btn-md" href="#" data-toggle="collapse" data-target="#1">GET</a>
+              <div class="panel-heading" data-toggle="collapse" data-target="#1">
+                <a class="btn btn-success btn-md" href="#" >GET</a>
                 <span class="text-black"> <strong>/CodeSystem/$lookup</strong>?system={CS}&code={Code}</span>
               </div>
               <div class="panel-body collapse" id="1" >
-                Panel content
+                <div class="bg-green pad-10">Returns information of a code in a code system</div>
+
+                <!-- Parameters -->
+                <div>
+                  <h4 class='hr-wrap'>Parameters</h4>
+                  <table class="table">
+                    <thead>
+                     <tr>
+                       <th class="col-md-3">Name</th>
+                       <th class="col-md-9">Description</th>
+                     </tr>
+                   </thead>
+                   <tbody>
+                     <tr>
+                       <td class="col-md-3 success ">
+                         <span class="required_param">CS</span><br/>
+                         <em class="small">String</em>
+                       </td>
+                       <td class="col-md-9 success">Code system name</td>
+                     </tr>
+                     <tr>
+                       <td class="col-md-3 success">Code</td>
+                       <td class="col-md-9 success">Code Identifier</td>
+                     </tr>
+                   </tbody>
+                  </table>
+                </div>
+                <!-- Parameters End -->
+
+                <!-- Response -->
+                <div>
+                  <h4 class='hr-wrap'>Response</h4>
+                  <table class="table">
+                    <thead>
+                     <tr>
+                       <th class="col-md-3">Code</th>
+                       <th class="col-md-9">Description</th>
+                     </tr>
+                   </thead>
+                   <tbody>
+                     <tr>
+                       <td class="col-md-3 success ">200</td>
+                       <td class="col-md-9 success">
+                         <div>
+                           <span>Success</span>
+                         </div>
+
+                       </td>
+                     </tr>
+                     <tr>
+                       <td class="col-md-3 success">404</td>
+                       <td class="col-md-9 success">Code not found</td>
+                     </tr>
+                   </tbody>
+                  </table>
+                </div>
+                <!-- Response -->
+
               </div>
             </div>
           </div>
 
           <div class="col-md-12">
             <div class="panel panel-info">
-              <div class="panel-heading">
-                <a class="btn btn-primary btn-md" href="#" data-toggle="collapse" data-target="#2">POST</a>
+              <div class="panel-heading" data-toggle="collapse" data-target="#2">
+                <a class="btn btn-primary btn-md" href="#">POST</a>
                 <span class="text-black"> <strong>/CodeSystem/$lookup</strong>?system={CS}&code={Code}</span>
               </div>
               <div class="panel-body collapse" id="2" >
@@ -103,8 +160,8 @@
 
           <div class="col-md-12">
             <div class="panel panel-danger">
-              <div class="panel-heading">
-                <a class="btn btn-danger btn-md" href="#" data-toggle="collapse" data-target="#4">DELETE</a>
+              <div class="panel-heading" data-toggle="collapse" data-target="#4">
+                <a class="btn btn-danger btn-md" href="#">DELETE</a>
                 <span class="text-black"> <strong>/CodeSystem/</strong>{CODE}</span>
               </div>
               <div class="panel-body collapse" id="4" >
@@ -132,8 +189,8 @@
 
           <div class="col-md-12">
             <div class="panel panel-success">
-              <div class="panel-heading">
-                <a class="btn btn-success btn-md" href="#" data-toggle="collapse" data-target="#v1">GET</a>
+              <div class="panel-heading" data-toggle="collapse" data-target="#v1">
+                <a class="btn btn-success btn-md" href="#" >GET</a>
                 <span class="text-black"> <strong>/ValueSet/$lookup</strong>{OID}/$expand</span>
               </div>
               <div class="panel-body collapse" id="v1" >
@@ -144,8 +201,8 @@
 
           <div class="col-md-12">
             <div class="panel panel-info">
-              <div class="panel-heading">
-                <a class="btn btn-primary btn-md" href="#" data-toggle="collapse" data-target="#v2">POST</a>
+              <div class="panel-heading" data-toggle="collapse" data-target="#v2">
+                <a class="btn btn-primary btn-md" href="#" >POST</a>
                 <span class="text-black"> <strong>/ValueSet/</strong>{OID}/$expand?filter=fail</span>
               </div>
               <div class="panel-body collapse" id="v2" >
@@ -156,8 +213,8 @@
 
           <div class="col-md-12">
             <div class="panel panel-success">
-              <div class="panel-heading">
-                <a class="btn btn-success btn-md" href="#" data-toggle="collapse" data-target="#v3">GET</a>
+              <div class="panel-heading" data-toggle="collapse" data-target="#v3">
+                <a class="btn btn-success btn-md" href="#" >GET</a>
                 <span class="text-black"> <strong>/ValueSet/</strong>{OID}</span>
               </div>
               <div class="panel-body collapse" id="v3" >
@@ -168,8 +225,8 @@
 
           <div class="col-md-12">
             <div class="panel panel-danger">
-              <div class="panel-heading">
-                <a class="btn btn-danger btn-md" href="#" data-toggle="collapse" data-target="#v4">DELETE</a>
+              <div class="panel-heading" data-toggle="collapse" data-target="#v4">
+                <a class="btn btn-danger btn-md" href="#" >DELETE</a>
                 <span class="text-black"> <strong>/ValueSet/</strong>{OID}</span>
               </div>
               <div class="panel-body collapse" id="v4" >
